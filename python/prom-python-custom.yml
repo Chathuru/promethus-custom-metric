@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prom
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prom
+  template:
+    metadata:
+      labels:
+        app: prom
+    spec:
+      containers:
+      - name: prom
+        image: lahindu/process_counter_exporter:v1
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+      hostNetwork: true
+      hostPID: true
