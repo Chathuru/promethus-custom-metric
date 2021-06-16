@@ -1,6 +1,6 @@
 https://github.com/prometheus/client_python
 
-https://sysdig.com/blog/prometheus-metrics/
+https://sysdig.com/blog/prometheus-metrics
 
 
 Run dumpy process with
