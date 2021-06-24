@@ -1,1 +1,1 @@
-# promethus-custom-metri
+# promethus-custom-metric
