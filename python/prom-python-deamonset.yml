@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: custom-metric-python
+spec:
+  selector:
+    matchLabels:
+      name: custom-metric-python
+  template:
+    metadata:
+      annotations:
+        prometheus.io/scrape: 'true'
+      labels:
+        name: custom-metric-python
+    spec:      
+      containers:
+      - name: prom
+        image: chathuru/promethus-custom-metric:python-network
+        ports:
+        - name: http
+          containerPort: 8000
+          protocol: TCP
+      hostNetwork: true
+      hostPID: true

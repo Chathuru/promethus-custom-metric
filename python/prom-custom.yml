@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: prom
-        image: lahindu/process_counter_exporter:v1
+        image: chathuru/promethus-custom-metric:python
         ports:
         - name: http
           containerPort: 8080
